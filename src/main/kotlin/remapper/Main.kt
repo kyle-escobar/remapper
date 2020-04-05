@@ -1,6 +1,7 @@
 package remapper
 
 import com.github.ajalt.clikt.core.CliktCommand
+import com.github.ajalt.clikt.core.subcommands
 import com.github.ajalt.clikt.parameters.options.versionOption
 
 object Main {
@@ -26,7 +27,7 @@ object Main {
      * @param args The cli arguments.
      */
     @JvmStatic
-    fun main(args: Array<String>) {
-        println("Hello world")
-    }
+    fun main(args: Array<String>) = Cli()
+        .subcommands(MatchCommand())
+        .main(args)
 }
