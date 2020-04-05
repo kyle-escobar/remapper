@@ -20,8 +20,11 @@ class MatchCommand : CliktCommand(
 ) {
 
     private val inputJar by argument(name = "Input jar", help = "The file path to the input jar.").file(mustExist = true, canBeDir = false)
+
     private val referenceJar by argument(name = "Reference jar", help = "The file path to the reference jar.").file(mustExist = true, canBeDir = false)
+
     private val outputDir by option("-o", "--output", help = "The directory to output the mappings.").file(canBeDir = true).default(File("mappings-output/"))
+
     private val target by option("-t", "--target", help = "The match targets to generate mappings for.").choice(
         "classes" to MatchTarget.CLASS,
         "methods" to MatchTarget.METHOD,

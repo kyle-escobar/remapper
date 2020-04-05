@@ -33,8 +33,14 @@ allprojects {
     }
 }
 
+apply plugin: 'application'
+
 dependencies {
     implementation project(':matcher')
 
     implementation "com.github.ajalt:clikt:$cliktVersion"
+}
+
+application {
+    mainClassName = "remapper.Main"
 }
