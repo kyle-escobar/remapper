@@ -37,6 +37,11 @@ class Class(private val node: ClassNode) : Matchable<Class> {
     val type get() = Type.getObjectType(node.name)
 
     /**
+     * The access integer
+     */
+    val access get() = node.access
+
+    /**
      * The parent [Class]s for this class.
      */
     val parents = mutableListOf<Class>()

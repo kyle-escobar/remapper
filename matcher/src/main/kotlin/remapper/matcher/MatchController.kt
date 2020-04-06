@@ -63,7 +63,15 @@ class MatchController(private val config: MatcherConfig) {
      * Runs the matcher
      */
     private fun executeMatchers() {
+        this.matchClasses()
+    }
 
+    /**
+     * Matches all the classes in [inputGroup] to the highest scoring
+     * class in [referenceGroup]
+     */
+    private fun matchClasses() {
+        Logger.info("Matching classes...")
     }
 
     /**

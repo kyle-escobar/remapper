@@ -4,4 +4,5 @@ dependencies {
     implementation "org.ow2.asm:asm-util:$asmVersion"
     implementation "org.ow2.asm:asm-tree:$asmVersion"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinxVersion"
+    implementation "me.tongfei:progressbar:$progressbarVersion"
 }
